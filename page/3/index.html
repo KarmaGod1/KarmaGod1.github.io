@@ -1,0 +1,280 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>KarmaGod的博客</title><meta name="author" content="KarmaGod"><meta name="copyright" content="KarmaGod"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0e14"><meta property="og:type" content="website">
+<meta property="og:title" content="KarmaGod的博客">
+<meta property="og:url" content="http://example.com/page/3/index.html">
+<meta property="og:site_name" content="KarmaGod的博客">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/avatar.jpg">
+<meta property="article:author" content="KarmaGod">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/avatar.jpg"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/page/3/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0e14')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'KarmaGod的博客',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">54</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">25</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E6%91%84%E5%BD%B1%E4%BD%9C%E5%93%81/"><i class="fa-fw fas fa-camera-retro"></i><span> 摄影作品</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E7%94%B5%E5%BD%B1%E8%A7%A3%E8%AF%B4/"><i class="fa-fw fas fa-film"></i><span> 电影解说</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E7%94%9F%E6%B4%BB/"><i class="fa-fw fas fa-heart"></i><span> 生活</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E6%96%87%E7%AB%A0/"><i class="fa-fw fas fa-pen-nib"></i><span> 文章</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(/img/gargantua.svg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">KarmaGod的博客</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E6%91%84%E5%BD%B1%E4%BD%9C%E5%93%81/"><i class="fa-fw fas fa-camera-retro"></i><span> 摄影作品</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E7%94%B5%E5%BD%B1%E8%A7%A3%E8%AF%B4/"><i class="fa-fw fas fa-film"></i><span> 电影解说</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E7%94%9F%E6%B4%BB/"><i class="fa-fw fas fa-heart"></i><span> 生活</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E6%96%87%E7%AB%A0/"><i class="fa-fw fas fa-pen-nib"></i><span> 文章</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">KarmaGod的博客</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/01/18/movie-catalog/" title="电影目录">电影目录</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-01-18T21:00:00.000Z" title="发表于 2026-01-18 21:00:00">2026-01-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%94%B5%E5%BD%B1%E8%A7%A3%E8%AF%B4/">电影解说</a></span></div><div class="content">20262025《雷霆特工队*》（又名《新复仇者联盟》） 《哪吒之魔童闹海》 《F1：狂飙飞车》 《美国队长4：新世界秩序》 《惊天魔盗团3》 《捕风捉影》 《新·驯龙高手》 《疯狂动物城2》 《坏蛋联盟2》 2024《回声》 《X战警97》 《死侍与金刚狼》 《毒液3：最后一舞》 《猩球崛起：新世界》 《黑袍纠察队第四季》 《豺狼的日子》 《功夫熊猫4》 2023《非诚勿扰3》 《你想活出怎样的人生》 《蜘蛛侠：纵横宇宙》 《银河护卫队3》 《蚁人2：量子狂潮》 《黑豹2：瓦坎达万岁》 《我是格鲁特第二季》 《洛基第二季》 《惊奇队长2》 《蚁人与黄蜂女：量子狂潮》 《黑豹2：瓦坎达万岁》 《银河护卫队3》 《我是格鲁特第二季》 《洛基第二季》 《秘密入侵》 《What If…?Season 2》 《蜘蛛侠：纵横宇宙》 《速度与激情10》 《变形金刚：超能勇士崛起》 《你想活出怎样的人生》 《非诚勿扰3》 《奥本海默》 2022《雷神4：爱与雷霆》 《女浩克》 《奇异博士2：疯狂多元宇宙》 《惊奇少女》 《银河护卫队：圣诞特辑》 《我是格鲁特第一季》 《月光骑士》 《神奇动物：...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/01/02/the-hateful-eight/" title="八恶人">八恶人</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-01-02T15:50:58.000Z" title="发表于 2026-01-02 15:50:58">2026-01-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%94%B5%E5%BD%B1%E8%A7%A3%E8%AF%B4/">电影解说</a></span></div><div class="content">基本信息 片名：八恶人 外文名：The Hateful Eight 导演：昆汀·塔伦蒂诺 主演：塞缪尔·杰克逊、库尔特·拉塞尔、詹妮弗·杰森·李 上映年份：2015 类型：西部 &#x2F; 犯罪 &#x2F; 悬疑 国家&#x2F;地区：美国  剧情简介一场暴风雪中，八名各怀鬼胎的陌生人被困在一间驿站里，谎言、仇恨与猜忌不断升级，最终爆发成一场血腥的信任危机。 剧照 </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/11/23/zootopia/" title="疯狂动物城">疯狂动物城</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-11-23T15:19:54.000Z" title="发表于 2025-11-23 15:19:54">2025-11-23</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%94%B5%E5%BD%B1%E8%A7%A3%E8%AF%B4/">电影解说</a></span></div><div class="content">基本信息 片名：疯狂动物城 外文名：Zootopia 导演：拜伦·霍华德、里奇·摩尔 主演：金妮弗·古德温、杰森·贝特曼（配音） 上映年份：2016 类型：动画 &#x2F; 喜剧 &#x2F; 冒险 国家&#x2F;地区：美国  剧情简介来自乡下的兔子警官朱迪来到动物城追逐警察梦，却处处碰壁，与狡猾的狐狸尼克搭档破案，揭开了城市背后的阴谋。一部老少皆宜又意味深长的动画。 剧照 </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/06/26/three-colors/" title="蓝白红">蓝白红</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-06-26T14:08:12.000Z" title="发表于 2025-06-26 14:08:12">2025-06-26</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%94%B5%E5%BD%B1%E8%A7%A3%E8%AF%B4/">电影解说</a></span></div><div class="content">基本信息 片名：蓝白红 外文名：Three Colors: Blue &#x2F; White &#x2F; Red 导演：克日什托夫·基耶斯洛夫斯基 主演：朱丽叶·比诺什、泽比纽·扎马乔斯基、伊莲娜·雅各布 上映年份：1993–1994 类型：剧情 国家&#x2F;地区：法国 &#x2F; 波兰 &#x2F; 瑞士  剧情简介波兰导演基耶斯洛夫斯基以法国国旗的蓝、白、红三色为隐喻，分别探讨自由、平等、博爱三个主题，是电影史上有名的「蓝白红三部曲」。 剧照 </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/06/11/friends/" title="老友记">老友记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-06-11T05:09:04.000Z" title="发表于 2025-06-11 05:09:04">2025-06-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%94%B5%E5%BD%B1%E8%A7%A3%E8%AF%B4/">电影解说</a></span></div><div class="content">基本信息 片名：老友记 外文名：Friends 导演：大卫·克雷恩、玛塔·考夫曼（主创） 主演：詹妮弗·安妮斯顿、柯特妮·考克斯、丽莎·库卓、马特·勒布朗、马修·派瑞、大卫·休默 上映年份：1994–2004 类型：喜剧 国家&#x2F;地区：美国  剧情简介六个住在纽约的好友——瑞秋、莫妮卡、菲比、乔伊、钱德勒与罗斯，十年间关于友情、爱情与成长的日常，是情景喜剧的经典之作。（美剧） 评分 豆瓣：9.7 IMDB：9.9 Karma：♥♥♥♥♥  简评时间过了很久，还是更新一下公众号，本来这个公众号也是自己玩的，半年前更新比较频繁，有种赶鸭子上架的感觉，我不是很舒服，所以搁置了好长好长一段时间。我也不图这个公众号有多少粉丝，有多少流量(虽然有几个阅读量非常好)，也没法靠这个挣刀了。但是，最近有一些想法，值得记录，不记录就忘了，所以还是更新一期吧。 这次记录的是《老友记》，一个我听过很多年却一无所知的一个剧集，终于在去年（2025年）看完。看着六人组在最后几集为离开做准备，直到最后一集大家突然在空荡荡的房间里交出了自己的钥匙，心里突然觉得不是滋味。我看的挺快，差不多断断续续花了几个...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/06/07/benjamin-button/" title="本杰明·巴顿奇事">本杰明·巴顿奇事</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-06-07T20:54:50.000Z" title="发表于 2025-06-07 20:54:50">2025-06-07</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%94%B5%E5%BD%B1%E8%A7%A3%E8%AF%B4/">电影解说</a></span></div><div class="content">基本信息 片名：本杰明·巴顿奇事 外文名：The Curious Case of Benjamin Button 导演：大卫·芬奇 主演：布拉德·皮特、凯特·布兰切特 上映年份：2008 类型：剧情 &#x2F; 爱情 &#x2F; 奇幻 国家&#x2F;地区：美国  剧情简介本杰明·巴顿出生时是个老人，随着岁月流逝却越活越年轻。他与黛西跨越一生的爱情，在逆向的时光中显得格外动人又令人叹息。 剧照 </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/05/14/arrival/" title="降临">降临</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-05-14T23:10:00.000Z" title="发表于 2025-05-14 23:10:00">2025-05-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%94%B5%E5%BD%B1%E8%A7%A3%E8%AF%B4/">电影解说</a></span></div><div class="content">评分 豆瓣：7.8 IMDB：7.9 Karma：♥♥♥♥  基本信息 片名：降临 外文名：Arrival 上映时间：2016年 导演：丹尼斯·维伦纽瓦 主演：杰瑞米·雷纳、艾米·亚当斯、福里斯特·惠特克、迈克尔·斯图巴 类型：科幻、剧情 语言：英语 时长：116分钟  简评主演是鹰眼和超人女友，只是在漫威的作品里面看到过鹰眼，看过他的《鹰眼》单元剧，”浪人”的造型还是帅的，演技就那样吧，不算坏但是也不出众。对于超人女友，艾米·亚当斯，没有过多的了解，在这部电影里面的表现还算出色。 关于这个电影，我想到了一个话题，也是这个电影里面出现的一个问题。作为一个漫威粉，我是很了解最近几年的好莱坞掺杂zzzq的电影，包括一些“私货”。电影毕竟是一种艺术，是一种文化，归根结底需要进行意识形态的传播，这一点无可厚非。在好莱坞的好多电影中都有一个特点就是，反派总是俄罗斯人（或者苏联人），比如《信条》开头大剧院里面的俄罗斯士兵，比如冬兵巴基，《猫和老鼠》里面也有”俄罗斯人”。每个国家的影视作品多多少少都会受到时局或者政治或者历史的影响，并以此在影视作品里面塑造反派，或者可以称为一种假想敌。我认为这...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/04/15/detachment/" title="超脱">超脱</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-04-15T14:40:06.000Z" title="发表于 2025-04-15 14:40:06">2025-04-15</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%94%B5%E5%BD%B1%E8%A7%A3%E8%AF%B4/">电影解说</a></span></div><div class="content">基本信息 片名：超脱 外文名：Detachment 导演：托尼·凯耶 主演：阿德里安·布洛迪 上映年份：2011 类型：剧情 国家&#x2F;地区：美国  剧情简介代课教师亨利来到一所问题丛生的学校，以旁观者的姿态冷眼看尽教育体制的荒凉与师生各自的无助，全片弥漫着压抑而诗意的「超脱」气息。 剧照 </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/03/15/april-story/" title="四月物语">四月物语</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-03-15T18:00:00.000Z" title="发表于 2025-03-15 18:00:00">2025-03-15</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%94%B5%E5%BD%B1%E8%A7%A3%E8%AF%B4/">电影解说</a></span></div><div class="content">评分 豆瓣：8.3 烂番茄：NULL Karma：♥♥♥  基本信息 片名：四月物语 外文名：April Story 上映时间：1998年 导演：岩井俊二 主演：松隆子、田边诚一、津田宽治、市川染五郎 类型：爱情 语言：日语 时长：67分钟  简评巧的是，这部电影是在1998年的3月14号上映的，要是昨天发公众号，那就正好是27周年，不过今天也差不了多少。当然，这个电影看完很久了，前段时间没时间发，后面还攒着好多电影，慢慢发喽。 回到这个电影，我其实不是太能欣赏的过来。导演是岩井俊二，他的作品最出名的就是《情书》，而在之前的帖子留言中就说了，日本文化对于情感的表达比较隐晦，对小情小爱刻画的比较细腻。 而这个电影，或者说是个只有67分钟的短片，从头到尾都是对女主的描写，女主的大学生活，女主的心理活动，女主的过去回忆，甚至这个电影没有一个真正意义上的男主。里面的男主，给人的感觉就像早上快要醒来但眼睛睁不开而努力给眼睛开条缝看到的光。 从头到尾只有女主的单相思，爱而不得但又羞于表达，我喜欢的剧情不是这样子的，但是我知道有这种经历的或者说情感的人很多，在一定程度上的确能引起部分少男少女的...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/02/20/darkest-hour/" title="至暗时刻">至暗时刻</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-02-20T21:04:02.000Z" title="发表于 2025-02-20 21:04:02">2025-02-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%94%B5%E5%BD%B1%E8%A7%A3%E8%AF%B4/">电影解说</a></span></div><div class="content">基本信息 片名：至暗时刻 外文名：Darkest Hour 导演：乔·赖特 主演：加里·奥德曼 上映年份：2017 类型：剧情 &#x2F; 传记 &#x2F; 历史 国家&#x2F;地区：英国  剧情简介二战初期，丘吉尔临危受命出任英国首相，在纳粹步步紧逼的至暗时刻，顶住巨大压力坚持抗战，发表振奋人心的演说。加里·奥德曼凭此片获奥斯卡影帝。 剧照 </div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/2/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#content-inner">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/#content-inner">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/#content-inner">6</a><a class="extend next" rel="next" href="/page/4/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">KarmaGod</div><div class="author-info-description">仰望星空 · 穿越时空</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">54</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">25</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/KarmaGod1"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">不要温和地走进那个良夜。</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/09/04/hello-world/" title="Hello World">Hello World</a><time datetime="2026-09-04T16:48:10.273Z" title="发表于 2026-09-04 16:48:10">2026-09-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/09/01/self-introduction/" title="自我介绍">自我介绍</a><time datetime="2026-09-01T12:00:00.000Z" title="发表于 2026-09-01 12:00:00">2026-09-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/08/28/photography/" title="摄影作品集">摄影作品集</a><time datetime="2026-08-28T12:00:00.000Z" title="发表于 2026-08-28 12:00:00">2026-08-28</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/08/25/travel-diary/" title="旅行日记">旅行日记</a><time datetime="2026-08-25T12:00:00.000Z" title="发表于 2026-08-25 12:00:00">2026-08-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/08/20/first-essay/" title="第一篇随笔">第一篇随笔</a><time datetime="2026-08-20T12:00:00.000Z" title="发表于 2026-08-20 12:00:00">2026-08-20</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%85%B3%E4%BA%8E%E6%88%91/"><span class="card-category-list-name">关于我</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%91%84%E5%BD%B1%E4%BD%9C%E5%93%81/"><span class="card-category-list-name">摄影作品</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%96%87%E7%AB%A0/"><span class="card-category-list-name">文章</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%94%9F%E6%B4%BB/"><span class="card-category-list-name">生活</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%94%B5%E5%BD%B1%E8%A7%A3%E8%AF%B4/"><span class="card-category-list-name">电影解说</span><span class="card-category-list-count">48</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E6%97%A5%E8%AE%B0/" style="font-size: 1.1em; color: #999">日记</a> <a href="/tags/%E6%BC%94%E8%AE%B2/" style="font-size: 1.1em; color: #999">演讲</a> <a href="/tags/%E5%86%92%E9%99%A9/" style="font-size: 1.1em; color: #999">冒险</a> <a href="/tags/%E6%82%AC%E7%96%91/" style="font-size: 1.1em; color: #999">悬疑</a> <a href="/tags/%E5%A4%A7%E5%AD%A6/" style="font-size: 1.1em; color: #999">大学</a> <a href="/tags/%E7%AB%BA%E5%8F%AF%E6%A1%A2/" style="font-size: 1.1em; color: #999">竺可桢</a> <a href="/tags/%E5%BD%B1%E8%AF%84/" style="font-size: 1.37em; color: #99a4b2">影评</a> <a href="/tags/%E6%97%85%E8%A1%8C/" style="font-size: 1.1em; color: #999">旅行</a> <a href="/tags/%E7%88%B1%E6%83%85/" style="font-size: 1.37em; color: #99a4b2">爱情</a> <a href="/tags/%E7%8A%AF%E7%BD%AA/" style="font-size: 1.17em; color: #999c9f">犯罪</a> <a href="/tags/%E5%8A%A8%E7%94%BB/" style="font-size: 1.23em; color: #999ea6">动画</a> <a href="/tags/%E6%91%84%E5%BD%B1/" style="font-size: 1.1em; color: #999">摄影</a> <a href="/tags/%E5%89%A7%E9%9B%86/" style="font-size: 1.17em; color: #999c9f">剧集</a> <a href="/tags/%E5%89%A7%E6%83%85/" style="font-size: 1.43em; color: #99a6b9">剧情</a> <a href="/tags/%E5%96%9C%E5%89%A7/" style="font-size: 1.3em; color: #99a1ac">喜剧</a> <a href="/tags/%E7%A7%91%E5%B9%BB/" style="font-size: 1.17em; color: #999c9f">科幻</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 1.1em; color: #999">随笔</a> <a href="/tags/%E5%8A%A8%E4%BD%9C/" style="font-size: 1.1em; color: #999">动作</a> <a href="/tags/%E7%9B%AE%E5%BD%95/" style="font-size: 1.1em; color: #999">目录</a> <a href="/tags/%E8%A7%A3%E8%AF%B4/" style="font-size: 1.1em; color: #999">解说</a> <a href="/tags/%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/" style="font-size: 1.1em; color: #999">自我介绍</a> <a href="/tags/%E8%A5%BF%E9%83%A8/" style="font-size: 1.17em; color: #999c9f">西部</a> <a href="/tags/%E6%8E%A8%E8%8D%90/" style="font-size: 1.1em; color: #999">推荐</a> <a href="/tags/%E7%94%B5%E5%BD%B1/" style="font-size: 1.5em; color: #99a9bf">电影</a> <a href="/tags/%E6%88%98%E4%BA%89/" style="font-size: 1.17em; color: #999c9f">战争</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      <a class="card-more-btn" href="/archives/"
+            title="查看更多">
+            <i class="fas fa-angle-right"></i>
+          </a>
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/09/">
+            <span class="card-archive-list-date">
+              九月 2026
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/08/">
+            <span class="card-archive-list-date">
+              八月 2026
+            </span>
+            <span class="card-archive-list-count">4</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/05/">
+            <span class="card-archive-list-date">
+              五月 2026
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/03/">
+            <span class="card-archive-list-date">
+              三月 2026
+            </span>
+            <span class="card-archive-list-count">6</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/02/">
+            <span class="card-archive-list-date">
+              二月 2026
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/01/">
+            <span class="card-archive-list-date">
+              一月 2026
+            </span>
+            <span class="card-archive-list-count">6</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/11/">
+            <span class="card-archive-list-date">
+              十一月 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/06/">
+            <span class="card-archive-list-date">
+              六月 2025
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">54</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-09-04T16:48:26.632Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By KarmaGod</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div><div class="footer_custom_text"><span>「不要温和地走进那个良夜，怒斥吧，怒斥光的消逝。」 —— 《星际穿越》</span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('https://cdn.jsdelivr.net/npm/typed.js@3.0.0/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  },
+  processSubtitle: (content, extraContents = []) => {
+    if (true) {
+      const sub = ["不要温和地走进那个良夜","怒斥吧，怒斥光的消逝","爱是唯一能超越时间与空间的事物","我们曾经仰望星空，思索我们在宇宙中的位置"].slice()
+
+      if (extraContents.length > 0) {
+        sub.unshift(...extraContents)
+      }
+
+      if (typeof content === 'string') {
+        sub.unshift(content)
+      } else if (Array.isArray(content)) {
+        sub.unshift(...content)
+      }
+
+      sub.length > 0 && typedJSFn.init(sub)
+    } else {
+      document.getElementById('subtitle').textContent = typeof content === 'string' ? content :
+        (Array.isArray(content) && content.length > 0 ? content[0] : '')
+    }
+  }
+}
+btf.addGlobalFn('pjaxSendOnce', () => { typed.destroy() }, 'typedDestroy')
+</script><script>function subtitleType () {
+  typedJSFn.processSubtitle(["不要温和地走进那个良夜","怒斥吧，怒斥光的消逝","爱是唯一能超越时间与空间的事物","我们曾经仰望星空，思索我们在宇宙中的位置"])
+}
+typedJSFn.run(subtitleType)</script></div><div class="interstellar-stars"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
