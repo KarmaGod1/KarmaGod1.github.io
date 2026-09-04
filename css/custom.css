@@ -1,0 +1,57 @@
+/* =====================================================
+   星际穿越 (Interstellar) 主题
+   深空背景 · 星野 · 黑洞吸积盘琥珀色
+   ===================================================== */
+
+/* 星野层：默认隐藏，暗色模式下显示 */
+.interstellar-stars {
+  display: none;
+}
+
+[data-theme="dark"] .interstellar-stars {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  background-image:
+    radial-gradient(1.2px 1.2px at 22px 34px, rgba(255, 255, 255, 0.9), transparent 55%),
+    radial-gradient(1px 1px at 110px 90px, rgba(255, 255, 255, 0.55), transparent 55%),
+    radial-gradient(1.8px 1.8px at 180px 160px, rgba(255, 224, 176, 0.8), transparent 55%),
+    radial-gradient(1px 1px at 60px 210px, rgba(255, 255, 255, 0.7), transparent 55%),
+    radial-gradient(1.4px 1.4px at 250px 60px, rgba(255, 255, 255, 0.6), transparent 55%),
+    radial-gradient(1px 1px at 200px 280px, rgba(255, 255, 255, 0.5), transparent 55%),
+    radial-gradient(1.6px 1.6px at 320px 190px, rgba(255, 235, 200, 0.85), transparent 55%),
+    radial-gradient(1px 1px at 140px 320px, rgba(255, 255, 255, 0.45), transparent 55%);
+  background-size: 340px 340px;
+  animation: interstellar-twinkle 7s ease-in-out infinite;
+}
+
+@keyframes interstellar-twinkle {
+  0%, 100% { opacity: 0.72; }
+  50% { opacity: 1; }
+}
+
+/* 深空底色（暗色模式） */
+[data-theme="dark"] body {
+  background-color: #05060f;
+}
+
+/* 链接悬停光晕 */
+[data-theme="dark"] a:hover {
+  color: #f5c98a;
+  text-shadow: 0 0 8px rgba(245, 181, 106, 0.45);
+}
+
+/* 头像加一圈吸积盘光晕 */
+.avatar-img {
+  box-shadow: 0 0 24px rgba(233, 169, 108, 0.35);
+}
+
+/* 引用块：琥珀色左边框，呼应经典台词 */
+blockquote {
+  border-left-color: #e9a96c;
+}
